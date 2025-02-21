@@ -1,0 +1,160 @@
+/* Estilos generales */
+body {
+    margin: 0;
+    font-family: sans-serif; /* Fuente sans-serif genérica para mejor compatibilidad */
+}
+
+/* Encabezado/Navegación */
+nav {
+    background-color: burlywood;
+    padding: 10px;
+    position: relative; /* Necesario para posicionar el menú desplegable */
+}
+
+nav h1 {
+    font-size: 2em; /* Tamaño de encabezado un poco más pequeño */
+    text-align: center;
+    margin-bottom: 10px; /* Espacio entre título y enlaces */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0; /* Elimina márgenes innecesarios */
+    text-align: center; /* Centrar los enlaces */
+}
+
+nav li {
+    display: inline; /* O inline-block si necesitas más control */
+    margin: 0 10px;
+    font-size: 1.2em; /* Usar em para tamaños relativos */
+}
+
+nav a {
+    text-decoration: none;
+    color: #333; /* Color de enlace más oscuro */
+}
+
+nav a:hover {
+    color: #007bff; /* Ejemplo de color al pasar el ratón */
+}
+
+/* Menú desplegable */
+.menu-toggle {
+    display: block; /* Mostrar el icono de hamburguesa */
+    cursor: pointer;
+    padding: 10px;
+}
+
+.hamburger {
+    width: 30px;
+    height: 3px;
+    background-color: #333;
+    margin: 5px 0;
+}
+
+nav ul { /* Estilos para el menú desplegable */
+    display: none; /* Ocultar la lista de enlaces */
+    position: absolute; /* Posicionar el menú desplegable */
+    top: 100%; /* Mostrar el menú debajo del icono */
+    left: 0;
+    width: 100%;
+    background-color: burlywood; /* Color de fondo del menú */
+    z-index: 1; /* Asegurar que el menú esté por encima de otros elementos */
+}
+
+nav li { /* Estilos para los elementos de la lista del menú desplegable */
+    padding: 10px;
+    text-align: center;
+}
+
+/* Sección 1 */
+.seccion-1 {
+    display: flex; /* Habilita flexbox */
+    align-items: center; /* Alinea verticalmente los elementos */
+    padding: 20px;
+}
+
+.acerca_de {
+    flex: 1; /* El texto ocupa el espacio disponible */
+    font-size: 1em; /* Usar em para tamaño relativo */
+    color: #a70606;
+    margin-top: 20px;
+}
+
+.seccion-1 img {
+    max-width: 300px;
+    height: auto;
+    margin-left: 20px; /* Espacio entre imagen y texto */
+}
+
+/* Sección 2 */
+.seccion-2 {
+    padding: 20px;
+}
+
+.seccion-2 img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Pie de página */
+footer {
+    background-color: burlywood;
+    padding: 20px;
+    text-align: center;
+}
+
+footer h3 {
+    font-size: 1.2em; /* Usar em para tamaño relativo */
+    margin-bottom: 10px;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer li {
+    display: inline;
+    margin: 0 10px;
+}
+
+footer a {
+    text-decoration: none;
+    color: #333; /* Color de enlace más oscuro */
+}
+
+footer a:hover {
+    color: #007bff; /* Ejemplo de color al pasar el ratón */
+}
+
+/* Media Queries */
+@media (max-width: 767px) {
+    .seccion-1 {
+        flex-direction: column; /* Apila los elementos verticalmente en pantallas pequeñas */
+    }
+
+    .seccion-1 img {
+        margin: 20px auto 0; /* Centra la imagen en pantallas pequeñas */
+        max-width: 200px; /* Ajusta el ancho máximo de la imagen en pantallas pequeñas */
+    }
+
+    .acerca_de {
+        font-size: 1.2em; /* Ajustar tamaño de fuente para pantallas pequeñas */
+        color: #280068; /* Ajustar color de texto en pantallas pequeñas */
+    }
+
+    nav h1 {
+        font-size: 1.5em; /* Encabezado más pequeño en móvil */
+    }
+}
+
+@media (min-width: 768px) {
+    .acerca_de {
+        font-size: 1.5em; /* Ajustar tamaño de fuente para pantallas grandes */
+        color: #000; /* Ajustar color de texto en pantallas grandes */
+    }
+}
